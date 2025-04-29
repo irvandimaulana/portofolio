@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--css kita-->
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* font-family: 'Josefin Sans', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            max-height: 100vh;
+            background-color: #1a1a1a;
+        }
+
+        /*nav */
+        header {
+            position: fixed;
+            padding-top: 80px;
+            top: 0;
+            left: 100;
+            width: 100%;
+            z-index: 999;
+            padding: 1.7rem 2rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-left: 10;  
+            padding-left: 0;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 1rem;
+            padding: 0.4rem 1rem;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #93DEFF;
+            border-radius: 10rem;
+            transition: all.3s ease-in-out;
+        }
+
+        #click {
+            display: none;
+        }
+
+        .menu i {
+            color: #93DEFF;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        /* Nav */
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 8.5rem;
+        }
+
+        .main h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            /* animation: check 1s ease forwards;
+            animation-delay: .1s; */
+        }
+
+        .main p {
+            margin-top: 1rem;
+            font-size: .98rem;
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            margin-top: 1.7rem;
+        }
+
+        .social a {
+            color: #93DEFF;
+            font-size: 1rem;
+            border: 2.0px solid #93DEFF;
+            border-radius: 50%;
+            padding: .40rem;
+            text-align: center;
+            width: 40px;
+        }
+
+        .social a:hover {
+            color: #1F252E;
+            background-color: #93DEFF;
+            box-shadow: 0 0 20px #93DEFF;
+            transition: all .3s ease-in-out;
+        }
+
+        .main h1 span:nth-child(1) {
+            font-size: 1.5rem;
+        }
+
+        .main h1 span:nth-child(2) {
+            color: #93DEFF;
+        }
+
+        .images {
+          padding-top: 100px;
+    position: relative;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 0px 20px 50px -10px #00E8F8;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #00E8F8; }
+  50% { box-shadow: 0 0 20px #00E8F8; }
+  100% { box-shadow: 0 0 5px #00E8F8; }
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    animation: glow 2s infinite;
+}
+
+      #about {
+        padding: bottom 150px; ;
+      } 
+        
+        #about h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            /* animation: check 1s ease forwards;
+            animation-delay: .1s; */
+        }
+        #about a {                        
+            color: #1a1a1a;
+            /* animation: check 1s ease forwards;
+            animation-delay: .1s; */
+        }
+        h2 {
+      font-size: 36px;
+      color: #777;
+      margin-bottom: 40px;
+    }
+    #galery {
+          background-color: #93DEFF;
+        }
+        #galery h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color:rgb(255, 255, 255);
+        }
+      #skill h1 {
+  color: #fff;
+}
+
+.skill-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      border: 1.5px solid #93DEFF;
+      border-radius: 20px;
+      padding: 20px 40px;
+      text-align: left;
+      background-color: #1a1a1a; 
+    }
+
+    .card h3 {
+      color: #93DEFF;
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
+
+    .card-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .skill-list {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .skill-list p {
+      color: #ffffff;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+    }
+
+    .skill-list p::before {
+      content: "✔";
+      color: #93DEFF;
+    }
+
+    /* Software Skill Grid */
+    .software-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding-top: 10px;
+    }
+
+    .software-item {
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .software-item img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .card-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+      .software-grid {
+        justify-content: center;
+      }
+      .contact {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding-top: 10rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-box {
+  background-color: #93DEFF;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.text-box p {
+  margin: 0;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.text-box strong {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social-icons a img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer a {
+  color: #93DEFF;
+}
+.footer p {
+  color: #000000;
+}
+        /* @keyframes check {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        } */
+         #project {
+          padding-top: 10;
+         }
+#latest-works {
+  min-height: 150vh;
+  background-color: #1a1a1a;
+  padding: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-project {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-title h2 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+}
+
+.about-description p {
+  font-size: 14px;
+  color: #7c7d81;
+  font-weight: 400;
+  margin: 0;
+}
+
+.latest-work-title h3 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+}
+
+.latest-work-title p {
+  font-size: 14px;
+  color: #7c7d81;
+  font-weight: 400;
+  margin: 0;
+}
+
+.project-card {
+  min-width: 35vw;
+  min-height: 60vh;
+  max-height: 80vh;
+  background-color: #2d3037;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.project-card-1 {
+  background: linear-gradient(180deg, #16191e, #252628);
+}
+
+.project-card-2 {
+  background: linear-gradient(225deg, #2c2940, #5a4073);
+}
+
+.project-card-3 {
+  background: linear-gradient(225deg, #01403A, #025951);
+}
+
+.project-card .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-card .title h3 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.project-card .title .tech-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project-card .title .tech-stack p {
+  font-size: 12px;
+  background-color: #7c7d8180;
+  color: #fff;
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 3px;
+  max-height: 25px;
+}
+
+.project-card img {
+  position: relative;
+}
+
+.project-img-1 {
+  height: 50vh;
+  top: 50px;
+  left: 100px;
+  object-fit: cover;
+  transform: scale(1.4) rotate(-5deg);
+  transition: 0.3s ease-in-out;
+}
+
+.project-card:hover .project-img-1{
+  transform: scale(1.6) rotate(-5deg);
+}
+
+.project-img-2 {
+  width: 30vw;
+  top: 50px;
+  left: 75px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px #00000040;
+  transition: 0.5s ease;
+}
+
+.project-card:hover .project-img-2 {
+  box-shadow: -20px -20px 20px #00000040;
+}
+
+.project-img-3 {
+  width: 30vw;
+  top: 50px;
+  left: 75px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px #00000040;
+  transition: 0.5s ease;
+}
+
+.project-card:hover .project-img-3 {
+  box-shadow: -20px -20px 20px #00000040;
+}
+
+.all-projects a {
+  color: #93DEFF;
+}
+
+.all-projects a h3 {
+  font-size: 26px;
+}
+
+.all-projects p {
+  font-size: 14px;
+  color: #FFF;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 26px;
+}
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #93DEFF;
+    color: #1a1a1a; /* Biar teksnya gelap dan kontras */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #5cc6f2; /* warna hover lebih gelap sedikit */
+    color: #ffffff;
+}
+
+        @media only screen and (max-width:480px) {
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #244D61;
+            }
+
+            header {
+                padding: 0.7rem 1rem;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            nav {
+                position: fixed;
+                display: grid;
+                top: 75px;
+                text-align: center;
+                background-color: #1F252E;
+                left: -100%;
+                z-index: 1;
+                width: 100%;
+            }
+
+            #click:checked~nav {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+
+            section {
+                margin: 1rem 1.5rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+      <!--Awal NAV-->
+        <div class="logo">
+            <a href="images/0.png" style="font-size: 20px; color:#93DEFF;">Irvandi</a>
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="mainicon">
+            <div class="menu">
+                <i class="bi bi-list"></i>
+            </div>
+        </label>
+        <nav>
+            <a href="#main" class="active" style="font-size: 20px;">Home</a>
+            <a href="#about" style="font-size: 20px;">About</a>
+            <a href="#projek" style="font-size: 20px; ">Project</a>
+            <a href="#latest-works" style="font-size: 20px; ">Certificate</a>
+            <a href="#skill" style="font-size: 20px;">Skill</a>
+            <a href="#contact" style="font-size: 20px;">Contact</a>
+        </nav>
+    </header>
+<!--akhir Nav-->
+
+<!--Awal profil-->
+    <section>
+        <div class="main">
+            <div class="detail">
+                <h1><span>Hi, It's Me</span> <br> I'm <span style="color:#93DEFF;">Moh Irvandi Maulana</span></h1>            
+                <div class="social">
+                    <a href="https://github.com/SODASUSU0530"><i class="bi bi-github"></i></a>
+                    <a href="https://www.instagram.com/irvanddi/?hl=id"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/moh-irvandi-maulana-139781289/"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com/pbd.peangpanjul"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+            <div class="images">
+                <img src="img/0.png" alt="Foto" class="photo" >
+            </div>
+        </div>
+    </section>
+<!--akhir profil-->
+
+<!--Awal About-->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 text-center">
+        <img src="img/work.png" alt="Person Working" class="img-fluid" style="max-height: 400px;">
+      </div>
+      
+      <div class="col-md-6">
+        <div class="about-title"> 
+        <h2>LET'S <br> INTRODUCE ABOUT <br> MYSELF</h2>
+        <div class="about-description">
+        <p> Love to learn something new and easy going.
+        </p>
+        <a href="https://drive.google.com/file/d/1_LAUgsJZi3iD9vUHvh_Lb9v-E7l7gy3i/view?usp=sharing" class="btn-download">DOWNLOAD CV</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!--Akhir About-->
+
+<!--Awal Projek-->
+<section id="projek">
+  <div class="container">
+    <div class="text-center mb-3">
+      <div class="col">
+        <h2 class="text-white">Projects</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="img/Projek1.jpeg" class="card-img-top" alt="2">
+          <div class="card-body">
+            <p class="card-text" style="color: white; font-size: 18px;">Sistem Kontrol Rain Shelter</p>
+          </div> 
+        </div>
+      </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/Projek2.png" class="card-img-top" alt="3">
+              <div class="card-body">
+                <p class="card-text" style="color: white; font-size: 18px;">Website Monitoring Rain Shelter</p>
+              </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <img src="img/Toko Buah.png" class="card-img-top" alt="5">
+        <div class="card-body">
+          <p class="card-text" style="color: white; font-size: 18px;">Website Toko Buah</p>
+        </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5eIVOIkJf-I" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <p class="card-text" style="color: white; font-size: 18px;">Sitem Monitoring Parkiran Mobil Menggunakan Android Kepler </p>
+      </div> 
+    </div>
+  </div>
+  
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/kedai.png" class="card-img-top" alt="8">
+              <div class="card-body">
+              <p class="card-text" style="color: white; font-size: 18px;">Website Kedai Kopi</p>
+             </div>
+            </div>
+          </div>  
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/waterlevel.png" class="card-img-top" alt="8">
+              <div class="card-body">
+              <p class="card-text" style="color: white; font-size: 18px;">Website Monitoring Ketinggian Air Sungai</p>
+             </div>
+            </div>
+          </div>  
+        </div>
+        <div class="all-projects">
+          <a href="">
+              <h3 style="padding: 10px;">All PROJECTS</h3>
+          </a>
+          <p>  * Some projects are not allowed to publish by Irvandi<br>if you want to see more. <a href="https://github.com/SODASUSU0530">HERE</a>
+          </p>
+      </div>
+  </div>
+      </div>
+   </section>
+  <!--Akhir Galery-->
+
+<!--Awal Skil-->
+<section id="latest-works">
+        <div class="left-project">
+            <div class="latest-work-title">
+                <h3>Certificate</h3>
+            </div>
+
+            <div class="project-card project-card-1">
+                <div class="title">
+                    <h3>Huawei</h3>
+                    <div class="tech-stack">
+                        <p>IOT</p>
+                    </div>
+                </div>
+                <img src="img/sertif1.jpg" alt="" class="project-img-2">
+            </div>
+
+            <div class="all-projects">
+                <a href="https://drive.google.com/file/d/1_jlUlLEvXUvWiYUpxU6dw1D3fAf8vqpz/view?usp=sharing">
+                    <h3>ALL Certificate</h3>
+                </a>                
+            </div>
+        </div>
+        <div class="right-project">
+            <div class="project-card project-card-2">
+                <div class="title">
+                    <h3>TOEFL</h3>
+                    <div class="tech-stack">
+                        <p>English Language</p>                        
+                    </div>
+                </div>
+                <img src="img/sertif2.jpg" alt="" class="project-img-1">
+            </div>
+            <div class="project-card project-card-3">
+                <div class="title">
+                    <h3>Huawei</h3>
+                    <div class="tech-stack">
+                        <p>AI Basic</p>
+                    </div>
+                </div>
+                <img src="img/sertif3.jpg" alt="" class="project-img-3">
+            </div>
+        </div>
+    </section>
+<!--Akhir Skill-->
+
+<!--Awal Skill-->
+<section id="skill">
+  <div class="container">
+    <div class="row text-center mb-8">
+      <div class="col">
+        <h1>Skill</h1>
+        <div class="skill-section">
+
+          <!-- Soft Skills -->
+          <div class="card">
+            <h3>Soft Skills</h3>
+            <div class="card-content">
+              <div class="skill-list">
+                <p>Public Speaking</p>
+                <p>Researching</p>
+                <p> Able to work in a team or individually</p>
+              </div>
+              <div class="skill-list">
+                <p>Leadership</p>
+                <p>Disciplined and responsible</p>
+                <p>Communicative</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Hard Skills -->
+          <div class="card">
+            <h3>Hard Skills</h3>
+            <div class="card-content">
+              <div class="skill-list">
+                <p>Web programming using HTML, CSS, and JavaScript</p>
+                <p>Microcontroller programming such as Arduino and NodeMCU</p>
+                <p>Processing mysql database</p>
+              </div>
+              <div class="skill-list">
+                <p>Performing splicing and crimping</p>
+                <p>Administration</p>
+                <p>Data input</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Software Skills -->
+          <div class="card">
+            <h3>Software Skills</h3>
+            <div class="software-grid">
+              <div class="software-item">
+                <img src="img/vscode.png" alt="Figma">
+                <div>VS Code</div>
+              </div>
+              <div class="software-item">
+                <img src="img/arduino.png" alt="Illustrator">
+                <div>Arduino</div>
+              </div>
+              <div class="software-item">
+                <img src="img/xampp.png" alt="Photoshop">
+                <div>XAMPP</div>
+              </div>
+              <div class="software-item">
+                <img src="img/canva.png" alt="Canva">
+                <div>Canva</div>
+              </div>
+              <div class="software-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                <div>JavaScript</div>
+              </div>
+              <div class="software-item">
+                <img src="img/msoff.png" alt="After Effects">
+                <div>Microsoft Office</div>
+              </div>
+            </div>
+          </div>
+         </div>
+</section>
+<!--Akhir Skill-->
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Contact me for further information or discussion!</p>
+
+  <div class="contact-info">
+    <div class="contact-item">
+      <div class="icon-box">
+        📫 <!-- atau pakai ikon font-awesome/material icon -->
+      </div>
+      <div class="text-box">
+        <p>Email:</p>
+        <strong>mohirvandi30@gmail.com</strong>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="icon-box">
+        📞
+      </div>
+      <div class="text-box">
+        <p>No. Hp:</p>
+        <strong>085138314594</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Awal footer-->
+<footer class="text-black text-center pb-8 pt-2 mt-5 bg-white">
+<p>Created with by <a href="https://www.instagram.com/irvanddi/?hl=id" class="text-info fw-bold">Moh Irvandi Maulana</a>
+</footer>
+<!--Akhir footer-->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+</style>
+  </body>
+</html>
