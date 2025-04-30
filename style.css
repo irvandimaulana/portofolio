@@ -1,0 +1,528 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 1rem;
+    background-color: rgba(26, 26, 26, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.logo a {
+    color: #93DEFF;
+    text-decoration: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.97rem;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    padding: 0.4rem 1rem;
+    margin: 0 0.2rem;
+}
+
+nav a.active,
+nav a:hover {
+    color: #93DEFF;
+    border-radius: 10rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#click {
+    display: none;
+}
+
+.menu i {
+    color: #93DEFF;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8rem 2rem 2rem;
+    padding-top: 2rem;
+}
+
+.main h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.main h1 span:first-child {
+    font-size: 1.5rem;
+    display: block;
+}
+
+.main h1 span:nth-child(2) {
+    color: #93DEFF;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social a {
+    color: #93DEFF;
+    font-size: 1rem;
+    border: 2px solid #93DEFF;
+    border-radius: 50%;
+    padding: 0.4rem;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social a:hover {
+    color: #1a1a1a;
+    background-color: #93DEFF;
+    box-shadow: 0 0 20px #93DEFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.images {
+    width: 100%;
+    max-width: 330px;
+    margin-top: 2rem;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 0px 20px 50px -10px #00E8F8;
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #00E8F8; }
+    50% { box-shadow: 0 0 20px #00E8F8; }
+    100% { box-shadow: 0 0 5px #00E8F8; }
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 1rem;
+}
+
+.about-title h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.about-description p {
+    font-size: 1rem;
+    color: #7c7d81;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    max-height: 400px;
+    margin-bottom: 2rem;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #93DEFF;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #5cc6f2;
+    color: #ffffff;
+}
+
+/* Projects Section */
+#projek {
+    padding: 4rem 1rem;
+}
+
+#projek h2 {
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #2d3037;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-text {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.all-projects {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.all-projects a {
+    color: #93DEFF;
+    text-decoration: none;
+}
+
+.all-projects a h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.all-projects p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Certificate Section */
+#latest-works {
+    padding: 4rem 1rem;
+    background-color: #1a1a1a;
+}
+
+.project-card {
+    background-color: #2d3037;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.project-card-1 {
+    background: linear-gradient(180deg, #16191e, #252628);
+}
+
+.project-card-2 {
+    background: linear-gradient(225deg, #2c2940, #5a4073);
+}
+
+.project-card-3 {
+    background: linear-gradient(225deg, #01403A, #025951);
+}
+
+.project-card .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.project-card .title h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.project-card .title .tech-stack p {
+    font-size: 0.8rem;
+    background-color: #7c7d8180;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Skill Section */
+#skill {
+    padding: 4rem 1rem;
+}
+
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    border: 1.5px solid #93DEFF;
+    border-radius: 20px;
+    padding: 1.5rem;
+    background-color: #1a1a1a;
+}
+
+.card h3 {
+    color: #93DEFF;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-list {
+    flex: 1;
+    min-width: 200px;
+}
+
+.skill-list p {
+    color: #ffffff;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.skill-list p::before {
+    content: "✔";
+    color: #93DEFF;
+    margin-right: 0.5rem;
+}
+
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.software-item {
+    text-align: center;
+    color: #ffffff;
+}
+
+.software-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 1rem;
+    background-color: #1a1a1a;
+}
+
+.contact h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact p {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-box {
+    background-color: #93DEFF;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #7c7d81;
+}
+
+.text-box strong {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem;
+    background-color: #000;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #93DEFF;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+        margin: 6rem 1rem 2rem;
+    }
+
+    .detail {
+        margin-bottom: 2rem;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .about-section .row {
+        flex-direction: column-reverse;
+    }
+
+    .about-title h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: rgba(26, 26, 26, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        transition: all 0.3s ease;
+    }
+
+    nav a {
+        padding: 0.8rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #click:checked ~ nav {
+        left: 0;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .main h1 {
+        font-size: 1.8rem;
+    }
+
+    .card-content {
+        flex-direction: column;
+    }
+
+    .software-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .main {
+        margin: 5rem 1rem 2rem;
+    }
+
+    .main h1 {
+        font-size: 1.5rem;
+    }
+
+    .main h1 span:first-child {
+        font-size: 1.2rem;
+    }
+
+    .about-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-card .title h3 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .software-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .software-item img {
+        width: 40px;
+        height: 40px;
+    }
+}
